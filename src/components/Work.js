@@ -4,7 +4,6 @@ class Work extends React.Component {
     render() {
         return (
             <div>
-                <form>
                     <label htmlFor="company">Company Name: </label>
                     <input id="company" name="company" />
                     <br />
@@ -19,7 +18,6 @@ class Work extends React.Component {
                     <br />
                     <label htmlFor="date-until">Date Until: </label>
                     <input id="date-until" name="date-until" type="date-from" />
-                </form>
             </div>
         )
     }

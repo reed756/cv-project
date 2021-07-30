@@ -4,7 +4,6 @@ class Education extends React.Component {
     render() {
         return (
             <div>
-                <form>
                     <label htmlFor="school">School: </label>
                     <input id="school" name="school" />
                     <br />
@@ -16,7 +15,6 @@ class Education extends React.Component {
                     <br />
                     <label htmlFor="date-until">Date Until: </label>
                     <input id="date-until" name="date-until" type="date" />
-                </form>
             </div>
         )
     }
