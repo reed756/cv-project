@@ -5,19 +5,19 @@ class Work extends React.Component {
         return (
             <div>
                     <label htmlFor="company">Company Name: </label>
-                    <input id="company" name="company" />
+                    <input name="company" />
                     <br />
                     <label htmlFor="position">Position: </label>
-                    <input id="position" name="position" />
+                    <input name="position" />
                     <br />
                     <label htmlFor="tasks">Main Tasks: </label>
-                    <input id="tasks" name="tasks" />
+                    <input name="tasks" />
                     <br />
                     <label htmlFor="date-from">Date From: </label>
-                    <input id="date-from" name="date-from" type="date-from" />
+                    <input name="date-from" type="date-from" />
                     <br />
                     <label htmlFor="date-until">Date Until: </label>
-                    <input id="date-until" name="date-until" type="date-from" />
+                    <input name="date-until" type="date-from" />
             </div>
         )
     }

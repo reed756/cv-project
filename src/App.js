@@ -9,19 +9,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
+      fullName: '',
       email: '',
       number: '',
     }
+    this.handleChange = this.handleChange.bind(this)
   }
   
-  handleChange = (e) => {
-
-  }
-
-  onSubmit = (e) => {
-    e.preventDefault();
-    
+  handleChange = (event) => {
+    this.setState({
+      fullName: event.target.value
+    })
   }
 
   render() {
@@ -30,8 +28,15 @@ class App extends React.Component {
         <Heading />
         <div className="content">
           <div className="forms">
-            <form onSubmit={this.onSubmit}>
-              <General />
+            <form>
+              <General 
+                fullname="fullName"
+                email="email"
+                phone="phone"
+                text="text"
+                placeholder="Please enter required information"
+                onChange={this.handleChange}
+              />
               <Education />
               <Work />
               <button type="submit">
@@ -41,7 +46,7 @@ class App extends React.Component {
           </div>
           <div className="preview">
             <div className="template">
-                  <p>{this.state.name}</p>
+                  <p>{this.state.fullName}</p>
                   <p>{this.state.email}</p>
                   <p>{this.state.number}</p>
               </div>
