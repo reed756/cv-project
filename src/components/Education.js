@@ -1,22 +1,44 @@
 import React from 'react';
 
 class Education extends React.Component {
-    
+
 
     render() {
         return (
             <div>
-                    <label htmlFor="school">School: </label>
-                    <input id="school" name="school" />
+                    <label htmlFor={ this.props.school }>School: 
+                        <input 
+                            name={ this.props.school }
+                            type={ this.props.text }
+                            placeholder={ this.props.placeholder }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
                     <br />
-                    <label htmlFor="subject">Subject: </label>
-                    <input id="subject" name="subject" />
+                    <label htmlFor={ this.props.subject }>Subject: 
+                        <input 
+                            name={ this.props.subject }
+                            type={ this.props.text }
+                            placeholder={ this.props.placeholder }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
                     <br />
-                    <label htmlFor="date-from">Date From: </label>
-                    <input id="date-from" name="date-from" type="date" />
+                    <label htmlFor={ this.props.studiedfrom }>Date From: 
+                        <input 
+                            name={ this.props.studiedfrom } 
+                            type={ this.props.date }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
                     <br />
-                    <label htmlFor="date-until">Date Until: </label>
-                    <input id="date-until" name="date-until" type="date" />
+                    <label htmlFor={ this.props.studieduntil }>Date Until: 
+                        <input 
+                            name={ this.props.studieduntil } 
+                            type={ this.props.date }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
             </div>
         )
     }

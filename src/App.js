@@ -13,6 +13,10 @@ class App extends React.Component {
       fullName: '',
       email: '',
       phone: '',
+      school: "",
+      subject: "",
+      studiedFrom: "",
+      studiedUntil: "",
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -39,7 +43,16 @@ class App extends React.Component {
                 placeholder="Please enter required information"
                 onChange={this.handleChange}
               />
-              <Education />
+              <Education 
+                school="school"
+                subject="subject"
+                studiedfrom="studiedFrom"
+                studieduntil="studiedUntil"
+                text="text"
+                date="date"
+                placeholder="Please enter required information"
+                onChange={this.handleChange}
+              />
               <Work />
               <button type="submit">
                 Submit
