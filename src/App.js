@@ -79,6 +79,15 @@ class App extends React.Component {
               fullname={ this.state.fullName }
               email={ this.state.email }
               phone={ this.state.phone }
+              school={ this.state.school }
+              subject={ this.state.subject }
+              studiedFrom={ this.state.studiedFrom }
+              studiedUntil={ this.state.studiedUntil }
+              company={ this.state.company }
+              position={ this.state.position }
+              tasks={ this.state.tasks }
+              workedFrom={ this.state.workedFrom }
+              workedUntil={ this.state.workedUntil }
             />
           </div>
         </div>

@@ -5,7 +5,7 @@ class Education extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="education-box">
                     <label htmlFor={ this.props.school }>School: 
                         <input 
                             name={ this.props.school }
