@@ -9,7 +9,7 @@ class General extends React.Component {
                             name={ this.props.fullname }
                             type={ this.props.text }
                             placeholder={ this.props.placeholder }
-                            onChange={this.props.onChange}
+                            onChange={ this.props.onChange }
                         />
                     </label>
                     <br />
@@ -18,6 +18,7 @@ class General extends React.Component {
                             name={ this.props.email } 
                             type={ this.props.email }
                             placeholder={ this.props.placeholder }
+                            onChange={ this.props.onChange }
                         />
                     </label>
                     <br />
@@ -26,6 +27,7 @@ class General extends React.Component {
                             name={ this.props.phone } 
                             type={ this.props.phone }
                             placeholder={ this.props.placeholder }
+                            onChange={ this.props.onChange }
                     />
                     </label>
             </div>

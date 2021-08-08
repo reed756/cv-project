@@ -4,6 +4,7 @@ import General from './components/General';
 import Education from './components/Education';
 import Work from './components/Work';
 import React from 'react';
+import Template from './components/Template';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,14 +12,15 @@ class App extends React.Component {
     this.state = {
       fullName: '',
       email: '',
-      number: '',
+      phone: '',
     }
     this.handleChange = this.handleChange.bind(this)
   }
   
   handleChange = (event) => {
+    const {name, value} = event.target
     this.setState({
-      fullName: event.target.value
+      [name]: value
     })
   }
 
@@ -45,11 +47,11 @@ class App extends React.Component {
             </form>
           </div>
           <div className="preview">
-            <div className="template">
-                  <p>{this.state.fullName}</p>
-                  <p>{this.state.email}</p>
-                  <p>{this.state.number}</p>
-              </div>
+            <Template 
+              fullname={this.state.fullName}
+              email={this.state.email}
+              phone={this.state.phone}
+            />
           </div>
         </div>
       </div>
