@@ -17,6 +17,11 @@ class App extends React.Component {
       subject: "",
       studiedFrom: "",
       studiedUntil: "",
+      company: "",
+      position: "",
+      tasks: "",
+      workedFrom: "",
+      workedUntil: "",
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -41,7 +46,7 @@ class App extends React.Component {
                 phone="phone"
                 text="text"
                 placeholder="Please enter required information"
-                onChange={this.handleChange}
+                onChange={ this.handleChange }
               />
               <Education 
                 school="school"
@@ -51,9 +56,19 @@ class App extends React.Component {
                 text="text"
                 date="date"
                 placeholder="Please enter required information"
-                onChange={this.handleChange}
+                onChange={ this.handleChange }
               />
-              <Work />
+              <Work 
+                company="company"
+                position="position"
+                tasks="tasks"
+                workedfrom="workedFrom"
+                workeduntil="workedUntil"
+                text="text"
+                date="date"
+                placeholder="Please enter required information"
+                onChange={ this.handleChange }
+              />
               <button type="submit">
                 Submit
               </button>
@@ -61,9 +76,9 @@ class App extends React.Component {
           </div>
           <div className="preview">
             <Template 
-              fullname={this.state.fullName}
-              email={this.state.email}
-              phone={this.state.phone}
+              fullname={ this.state.fullName }
+              email={ this.state.email }
+              phone={ this.state.phone }
             />
           </div>
         </div>

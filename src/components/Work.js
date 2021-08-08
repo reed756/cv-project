@@ -4,20 +4,48 @@ class Work extends React.Component {
     render() {
         return (
             <div>
-                    <label htmlFor="company">Company Name: </label>
-                    <input name="company" />
+                    <label htmlFor={ this.props.company }>Company Name: 
+                        <input 
+                            name={ this.props.company } 
+                            type={ this.props.text }
+                            placeholder={ this.props.placeholder }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
                     <br />
-                    <label htmlFor="position">Position: </label>
-                    <input name="position" />
+                    <label htmlFor={ this.props.position }>Position: 
+                        <input 
+                            name={ this.props.position } 
+                            type={ this.props.text }
+                            placeholder={ this.props.placeholder }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
                     <br />
-                    <label htmlFor="tasks">Main Tasks: </label>
-                    <input name="tasks" />
+                    <label htmlFor={ this.props.tasks }>Main Tasks: 
+                        <textarea 
+                            name={ this.props.tasks }
+                            type={ this.props.text }
+                            placeholder={ this.props.placeholder }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
                     <br />
-                    <label htmlFor="date-from">Date From: </label>
-                    <input name="date-from" type="date-from" />
+                    <label htmlFor={ this.props.workedfrom }>Date From: 
+                        <input 
+                            name={ this.props.workedfrom } 
+                            type={ this.props.date }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
                     <br />
-                    <label htmlFor="date-until">Date Until: </label>
-                    <input name="date-until" type="date-from" />
+                    <label htmlFor={ this.props.workeduntil }>Date Until: 
+                        <input 
+                            name={ this.props.workeduntil } 
+                            type={ this.props.date }
+                            onChange={ this.props.onChange }
+                        />
+                    </label>
             </div>
         )
     }
