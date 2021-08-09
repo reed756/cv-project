@@ -1,9 +1,18 @@
 .general-box label {
     display: inline-block;
-    width: 200px;
+    width: 150px;
     margin: 0;
     padding: 0;
+    font-size: 20px;
 }
 .general-box input  {
-    width: 250px;
+    width: 300px;
+    padding: 0;
+    border: none;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.general-box {
+    margin-bottom: 10px;
+    margin-top: 100px;
 }

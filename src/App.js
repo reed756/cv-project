@@ -5,6 +5,7 @@ import Education from './components/Education';
 import Work from './components/Work';
 import React from 'react';
 import Template from './components/Template';
+import Footer from './components/Footer'
 
 class App extends React.Component {
   constructor(props) {
@@ -91,6 +92,7 @@ class App extends React.Component {
             />
           </div>
         </div>
+        <Footer footer="© 2021 - James Reed"/>
       </div>
     );
   }

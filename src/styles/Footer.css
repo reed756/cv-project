@@ -1,6 +1,6 @@
-header {
+footer {
     width: 100%;
-    top: 0;
+    bottom: 0;
     background-color: rgb(131, 131, 131);
     height: 100px;
     display: flex;
@@ -8,8 +8,3 @@ header {
     align-items: center;
     color: whitesmoke;
 }
-
-header h1 {
-    margin: 0;
-}
-
