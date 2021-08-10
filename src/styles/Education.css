@@ -16,3 +16,13 @@
 .education-box {
     margin-bottom: 10px;
 }
+@media only screen and (max-width: 410px) {
+    .education-box input  {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .education-box input  {
+        width: 275px;
+    }
+}

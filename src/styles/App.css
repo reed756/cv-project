@@ -92,7 +92,18 @@ button:hover {
     }
 }
 @media only screen and (max-width: 410px) {
-    .general-box, .general-box input, .input {
-        width: 350px;
+    button {
+        width: 300px;
+    }
+    .preview {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    button {
+        width: 275px;
+    }
+    .preview {
+        width: 275px;
     }
 }

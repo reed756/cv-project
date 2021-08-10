@@ -19,3 +19,13 @@
 .work-box textarea {
     padding: 0 20px;
 }
+@media only screen and (max-width: 410px) {
+    .work-box input, .work-box textarea {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .work-box input, .work-box textarea {
+        width: 275px;
+    }
+}
