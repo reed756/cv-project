@@ -1,4 +1,8 @@
 @import-normalize;
+* {
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+}
 html {
     line-height: normal;
 }
@@ -32,9 +36,24 @@ form {
     align-items: center;
 }
 button {
-    width: 450px;
+    width: 600px;
     height: 50px;
     border: none;
     font-size: 20px;
+    cursor: pointer;
+    padding: 0.3em 1.2em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255,255,255,0);
+    border-radius: 2em;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    transition: all 0.2s;
+}
+button:hover {
+    border-color: rgba(255,255,255,1);
+}
+.green {
     background-color: rgb(30, 255, 0);
+}
+.red {
+    background-color: rgb(255, 0, 0);
 }

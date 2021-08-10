@@ -1,17 +1,21 @@
 .work-box label {
     display: inline-block;
-    width: 150px;
+    width: 200px;
     margin: 0;
     padding: 0;
     font-size: 20px;
 }
 .work-box input, .work-box textarea {
-    width: 300px;
-    padding: 0;
+    width: 400px;
+    padding: 0 10px;
     border: none;
     margin-bottom: 5px;
     font-size: 20px;
+    border-radius: 2em;
 }
 .work-box {
     margin-bottom: 10px;
+}
+.work-box textarea {
+    padding: 0 20px;
 }

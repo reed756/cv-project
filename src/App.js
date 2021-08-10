@@ -95,7 +95,7 @@ class App extends React.Component {
                 stateWorkedUntil={ this.state.workedUntil }
                 onChange={ this.handleChange }
               />
-              <button type="submit">
+              <button type="submit" className={ this.state.isSubmitted ? "red" : "green" }>
                 { this.state.isSubmitted ? "EDIT" : "SUBMIT" }
               </button>
             </form>

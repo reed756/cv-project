@@ -1,16 +1,17 @@
 .general-box label {
     display: inline-block;
-    width: 150px;
+    width: 200px;
     margin: 0;
     padding: 0;
     font-size: 20px;
 }
 .general-box input  {
-    width: 300px;
-    padding: 0;
+    width: 400px;
+    padding: 0 10px;
     border: none;
     margin-bottom: 5px;
     font-size: 20px;
+    border-radius: 2em;
 }
 .general-box {
     margin-bottom: 10px;
