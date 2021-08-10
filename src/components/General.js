@@ -12,6 +12,7 @@ class General extends React.Component {
                         placeholder={ this.props.placeholder }
                         value={ this.props.isSubmitted ? "" : this.props.stateName }
                         onChange={ this.props.onChange }
+                        className="input"
                     />
                     
                     <br />

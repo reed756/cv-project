@@ -24,7 +24,6 @@ body {
     height: 800px;
 }
 .preview {
-    width: 50%;
     background-color: white;
     border: 1px solid black;
     height: 900px;
@@ -56,4 +55,44 @@ button:hover {
 }
 .red {
     background-color: rgb(255, 0, 0);
+}
+/* MEDIA QUERIES */ 
+@media only screen and (max-width: 1215px) {
+    .content {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .forms {
+        height: 700px;
+    }
+    .preview {
+        margin-bottom: 100px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .forms {
+        height: auto;
+        margin-bottom: 100px;
+    }
+    .general-box {
+        display: block;
+    }
+    .general-box input, .education-box input, .work-box input, .work-box textarea {
+        display: block;
+    }
+    button {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 630px) {
+    .preview {
+        width: 400px;
+        height: 1000px;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .general-box, .general-box input, .input {
+        width: 350px;
+    }
 }
