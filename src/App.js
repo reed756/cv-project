@@ -23,6 +23,7 @@ class App extends React.Component {
       tasks: "",
       workedFrom: "",
       workedUntil: "",
+      isSubmitted: false,
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -34,13 +35,23 @@ class App extends React.Component {
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.setState(prevState => {
+      return {
+        isSubmitted: !prevState.isSubmitted
+      }
+    })
+    console.log(this.state)
+  }
+
   render() {
     return (
       <div className="App">
         <Heading />
         <div className="content">
           <div className="forms">
-            <form>
+            <form onSubmit={ this.handleSubmit }>
               <General 
                 fullname="fullName"
                 email="email"

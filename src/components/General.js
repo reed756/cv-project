@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import '../styles/General.css'
 
 class General extends React.Component {
