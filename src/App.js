@@ -42,7 +42,6 @@ class App extends React.Component {
         isSubmitted: !prevState.isSubmitted
       }
     })
-    console.log(this.state)
   }
 
   render() {
@@ -58,6 +57,10 @@ class App extends React.Component {
                 phone="phone"
                 text="text"
                 placeholder="Please enter required information"
+                isSubmitted={ this.state.isSubmitted }
+                stateName={ this.state.fullName }
+                stateEmail={ this.state.email }
+                statePhone={ this.state.phone }
                 onChange={ this.handleChange }
               />
               <Education 
@@ -68,6 +71,11 @@ class App extends React.Component {
                 text="text"
                 date="date"
                 placeholder="Please enter required information"
+                isSubmitted={ this.state.isSubmitted }
+                stateSchool={ this.state.school }
+                stateSubject={ this.state.subject }
+                stateStudiedFrom={ this.state.studiedFrom }
+                stateStudiedUntil={ this.state.studiedUntil }
                 onChange={ this.handleChange }
               />
               <Work 
@@ -79,10 +87,16 @@ class App extends React.Component {
                 text="text"
                 date="date"
                 placeholder="Please enter required information"
+                isSubmitted={ this.state.isSubmitted }
+                stateCompany={ this.state.company }
+                statePosition={ this.state.position }
+                stateTasks={ this.state.tasks }
+                stateWorkedFrom={ this.state.workedFrom }
+                stateWorkedUntil={ this.state.workedUntil }
                 onChange={ this.handleChange }
               />
               <button type="submit">
-                Submit
+                { this.state.isSubmitted ? "EDIT" : "SUBMIT" }
               </button>
             </form>
           </div>

@@ -10,6 +10,7 @@ class Work extends React.Component {
                         name={ this.props.company } 
                         type={ this.props.text }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.stateCompany }
                         onChange={ this.props.onChange }
                     />
                     
@@ -19,6 +20,7 @@ class Work extends React.Component {
                         name={ this.props.position } 
                         type={ this.props.text }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.statePosition }
                         onChange={ this.props.onChange }
                     />
                     
@@ -28,6 +30,7 @@ class Work extends React.Component {
                         name={ this.props.tasks }
                         type={ this.props.text }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.stateTasks }
                         onChange={ this.props.onChange }
                     />
                     
@@ -36,6 +39,7 @@ class Work extends React.Component {
                     <input 
                         name={ this.props.workedfrom } 
                         type={ this.props.date }
+                        value={ this.props.isSubmitted ? "" : this.props.stateWorkedFrom }
                         onChange={ this.props.onChange }
                     />
                     
@@ -44,6 +48,7 @@ class Work extends React.Component {
                     <input 
                         name={ this.props.workeduntil } 
                         type={ this.props.date }
+                        value={ this.props.isSubmitted ? "" : this.props.stateWorkedUntil }
                         onChange={ this.props.onChange }
                     />
                     

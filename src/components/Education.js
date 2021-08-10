@@ -12,6 +12,7 @@ class Education extends React.Component {
                         name={ this.props.school }
                         type={ this.props.text }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.stateSchool }
                         onChange={ this.props.onChange }
                     />
                     
@@ -21,6 +22,7 @@ class Education extends React.Component {
                         name={ this.props.subject }
                         type={ this.props.text }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.stateSubject }
                         onChange={ this.props.onChange }
                     />
                     
@@ -29,6 +31,7 @@ class Education extends React.Component {
                     <input 
                         name={ this.props.studiedfrom } 
                         type={ this.props.date }
+                        value={ this.props.isSubmitted ? "" : this.props.stateStudiedFrom }
                         onChange={ this.props.onChange }
                     />
                     
@@ -37,6 +40,7 @@ class Education extends React.Component {
                     <input 
                         name={ this.props.studieduntil } 
                         type={ this.props.date }
+                        value={ this.props.isSubmitted ? "" : this.props.stateStudiedUntil }
                         onChange={ this.props.onChange }
                     />
                     

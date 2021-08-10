@@ -10,6 +10,7 @@ class General extends React.Component {
                         name={ this.props.fullname }
                         type={ this.props.text }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.stateName }
                         onChange={ this.props.onChange }
                     />
                     
@@ -19,6 +20,7 @@ class General extends React.Component {
                         name={ this.props.email } 
                         type={ this.props.email }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.stateEmail }
                         onChange={ this.props.onChange }
                     />
                     
@@ -28,6 +30,7 @@ class General extends React.Component {
                         name={ this.props.phone } 
                         type={ this.props.phone }
                         placeholder={ this.props.placeholder }
+                        value={ this.props.isSubmitted ? "" : this.props.statePhone }
                         onChange={ this.props.onChange }
                     />
                     
