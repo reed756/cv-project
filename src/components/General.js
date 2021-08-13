@@ -1,43 +1,41 @@
 import React from 'react'
 import '../styles/General.css'
 
-class General extends React.Component {
-    render() {
+function General(props) {
         return (
             <div className="general-box">
-                    <label htmlFor={ this.props.fullname }>Name: </label>
+                    <label htmlFor={ props.fullname }>Name: </label>
                     <input 
-                        name={ this.props.fullname }
-                        type={ this.props.text }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.stateName }
-                        onChange={ this.props.onChange }
+                        name={ props.fullname }
+                        type={ props.text }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.stateName }
+                        onChange={ props.onChange }
                         className="input"
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.email }>Email Address: </label>
+                    <label htmlFor={ props.email }>Email Address: </label>
                     <input 
-                        name={ this.props.email } 
-                        type={ this.props.email }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.stateEmail }
-                        onChange={ this.props.onChange }
+                        name={ props.email } 
+                        type={ props.email }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.stateEmail }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.phone }>Phone Number: </label>
+                    <label htmlFor={ props.phone }>Phone Number: </label>
                     <input 
-                        name={ this.props.phone } 
-                        type={ this.props.phone }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.statePhone }
-                        onChange={ this.props.onChange }
+                        name={ props.phone } 
+                        type={ props.phone }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.statePhone }
+                        onChange={ props.onChange }
                     />
                     
             </div>
         )
-    }
 }
 
 export default General;

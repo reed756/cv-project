@@ -3,7 +3,6 @@ import '../styles/Education.css'
 
 class Education extends React.Component {
 
-
     render() {
         return (
             <div className="education-box">
