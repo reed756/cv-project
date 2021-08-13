@@ -3,39 +3,53 @@ import './styles/App.css';
 import General from './components/General';
 import Education from './components/Education';
 import Work from './components/Work';
-import React from 'react';
+import React, { useState } from 'react';
 import Template from './components/Template';
 import Footer from './components/Footer'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fullName: '',
-      email: '',
-      phone: '',
-      school: "",
-      subject: "",
-      studiedFrom: "",
-      studiedUntil: "",
-      company: "",
-      position: "",
-      tasks: "",
-      workedFrom: "",
-      workedUntil: "",
-      isSubmitted: false,
-    }
-    this.handleChange = this.handleChange.bind(this)
-  }
+function App() {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     fullName: '',
+  //     email: '',
+  //     phone: '',
+  //     school: "",
+  //     subject: "",
+  //     studiedFrom: "",
+  //     studiedUntil: "",
+  //     company: "",
+  //     position: "",
+  //     tasks: "",
+  //     workedFrom: "",
+  //     workedUntil: "",
+  //     isSubmitted: false,
+  //   }
+  //   this.handleChange = this.handleChange.bind(this)
+  // }
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [school, setSchool] = useState('');
+  const [subject, setSubject] = useState('');
+  const [studiedFrom, setStudiedFrom] = useState('');
+  const [studiedUntil, setStudiedUntil] = useState('');
+  const [company, setCompany] = useState('');
+  const [position, setPosition] = useState('');
+  const [tasks, setTasks] = useState('');
+  const [workedFrom, setWorkedFrom] = useState('');
+  const [workedUntil, setWorkedUntil] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
   
-  handleChange = (event) => {
+  function handleChange (event) {
     const {name, value} = event.target
     this.setState({
       [name]: value
     })
   }
 
-  handleSubmit = (event) => {
+  function handleSubmit (event) {
     event.preventDefault()
     this.setState(prevState => {
       return {
@@ -44,24 +58,23 @@ class App extends React.Component {
     })
   }
 
-  render() {
-    return (
+  return (
       <div className="App">
         <Heading />
         <div className="content">
           <div className="forms">
-            <form onSubmit={ this.handleSubmit }>
+            <form onSubmit={ handleSubmit }>
               <General 
                 fullname="fullName"
                 email="email"
                 phone="phone"
                 text="text"
                 placeholder="Please enter required information"
-                isSubmitted={ this.state.isSubmitted }
-                stateName={ this.state.fullName }
-                stateEmail={ this.state.email }
-                statePhone={ this.state.phone }
-                onChange={ this.handleChange }
+                isSubmitted={ isSubmitted }
+                stateName={ name }
+                stateEmail={ email }
+                statePhone={ phone }
+                onChange={ handleChange }
               />
               <Education 
                 school="school"
@@ -71,12 +84,12 @@ class App extends React.Component {
                 text="text"
                 date="date"
                 placeholder="Please enter required information"
-                isSubmitted={ this.state.isSubmitted }
-                stateSchool={ this.state.school }
-                stateSubject={ this.state.subject }
-                stateStudiedFrom={ this.state.studiedFrom }
-                stateStudiedUntil={ this.state.studiedUntil }
-                onChange={ this.handleChange }
+                isSubmitted={ isSubmitted }
+                stateSchool={ school }
+                stateSubject={ subject }
+                stateStudiedFrom={ studiedFrom }
+                stateStudiedUntil={ studiedUntil }
+                onChange={ handleChange }
               />
               <Work 
                 company="company"
@@ -87,40 +100,39 @@ class App extends React.Component {
                 text="text"
                 date="date"
                 placeholder="Please enter required information"
-                isSubmitted={ this.state.isSubmitted }
-                stateCompany={ this.state.company }
-                statePosition={ this.state.position }
-                stateTasks={ this.state.tasks }
-                stateWorkedFrom={ this.state.workedFrom }
-                stateWorkedUntil={ this.state.workedUntil }
-                onChange={ this.handleChange }
+                isSubmitted={ isSubmitted }
+                stateCompany={ company }
+                statePosition={ position }
+                stateTasks={ tasks }
+                stateWorkedFrom={ workedFrom }
+                stateWorkedUntil={ workedUntil }
+                onChange={ handleChange }
               />
-              <button type="submit" className={ this.state.isSubmitted ? "red" : "green" }>
-                { this.state.isSubmitted ? "EDIT" : "SUBMIT" }
+              <button type="submit" className={ isSubmitted ? "red" : "green" }>
+                { isSubmitted ? "EDIT" : "SUBMIT" }
               </button>
             </form>
           </div>
           <div className="preview">
             <Template 
-              fullname={ this.state.fullName }
-              email={ this.state.email }
-              phone={ this.state.phone }
-              school={ this.state.school }
-              subject={ this.state.subject }
-              studiedFrom={ this.state.studiedFrom }
-              studiedUntil={ this.state.studiedUntil }
-              company={ this.state.company }
-              position={ this.state.position }
-              tasks={ this.state.tasks }
-              workedFrom={ this.state.workedFrom }
-              workedUntil={ this.state.workedUntil }
+              fullname={ name }
+              email={ email }
+              phone={ phone }
+              school={ school }
+              subject={ subject }
+              studiedFrom={ studiedFrom }
+              studiedUntil={ studiedUntil }
+              company={ company }
+              position={ position }
+              tasks={ tasks }
+              workedFrom={ workedFrom }
+              workedUntil={ workedUntil }
             />
           </div>
         </div>
         <Footer footer="© 2021 - James Reed"/>
       </div>
     );
-  }
 }
 
 export default App;
