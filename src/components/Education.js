@@ -1,51 +1,47 @@
-import React from 'react'
 import '../styles/Education.css'
 
-class Education extends React.Component {
-
-    render() {
+function Education(props) {
         return (
             <div className="education-box">
-                    <label htmlFor={ this.props.school }>School: </label>
+                    <label htmlFor={ props.school }>School: </label>
                     <input 
-                        name={ this.props.school }
-                        type={ this.props.text }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.stateSchool }
-                        onChange={ this.props.onChange }
+                        name={ props.school }
+                        type={ props.text }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.stateSchool }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.subject }>Subject: </label>
+                    <label htmlFor={ props.subject }>Subject: </label>
                     <input 
-                        name={ this.props.subject }
-                        type={ this.props.text }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.stateSubject }
-                        onChange={ this.props.onChange }
+                        name={ props.subject }
+                        type={ props.text }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.stateSubject }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.studiedfrom }>Date From: </label>
+                    <label htmlFor={ props.studiedfrom }>Date From: </label>
                     <input 
-                        name={ this.props.studiedfrom } 
-                        type={ this.props.date }
-                        value={ this.props.isSubmitted ? "" : this.props.stateStudiedFrom }
-                        onChange={ this.props.onChange }
+                        name={ props.studiedfrom } 
+                        type={ props.date }
+                        value={ props.isSubmitted ? "" : props.stateStudiedFrom }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.studieduntil }>Date Until: </label>
+                    <label htmlFor={ props.studieduntil }>Date Until: </label>
                     <input 
-                        name={ this.props.studieduntil } 
-                        type={ this.props.date }
-                        value={ this.props.isSubmitted ? "" : this.props.stateStudiedUntil }
-                        onChange={ this.props.onChange }
+                        name={ props.studieduntil } 
+                        type={ props.date }
+                        value={ props.isSubmitted ? "" : props.stateStudiedUntil }
+                        onChange={ props.onChange }
                     />
                     
             </div>
         )
-    }
 }
 
 export default Education;

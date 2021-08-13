@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/General.css'
 
 function General(props) {

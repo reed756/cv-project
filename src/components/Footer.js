@@ -1,14 +1,11 @@
-import React from "react"
 import '../styles/Footer.css'
 
-class Footer extends React.Component {
-    render() {
+function Footer(props) {
         return (
             <footer>
-                <h3>{this.props.footer}</h3>
+                <h3>{ props.footer }</h3>
             </footer>
         )
-    }
 }
 
 export default Footer

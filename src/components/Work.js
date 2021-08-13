@@ -1,60 +1,57 @@
-import React from 'react'
 import '../styles/Work.css'
 
-class Work extends React.Component {
-    render() {
+function Work(props) {
         return (
             <div className="work-box">
-                    <label htmlFor={ this.props.company }>Company Name: </label>
+                    <label htmlFor={ props.company }>Company Name: </label>
                     <input 
-                        name={ this.props.company } 
-                        type={ this.props.text }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.stateCompany }
-                        onChange={ this.props.onChange }
+                        name={ props.company } 
+                        type={ props.text }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.stateCompany }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.position }>Position: </label>
+                    <label htmlFor={ props.position }>Position: </label>
                     <input 
-                        name={ this.props.position } 
-                        type={ this.props.text }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.statePosition }
-                        onChange={ this.props.onChange }
+                        name={ props.position } 
+                        type={ props.text }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.statePosition }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.tasks }>Main Tasks: </label>
+                    <label htmlFor={ props.tasks }>Main Tasks: </label>
                     <textarea 
-                        name={ this.props.tasks }
-                        type={ this.props.text }
-                        placeholder={ this.props.placeholder }
-                        value={ this.props.isSubmitted ? "" : this.props.stateTasks }
-                        onChange={ this.props.onChange }
+                        name={ props.tasks }
+                        type={ props.text }
+                        placeholder={ props.placeholder }
+                        value={ props.isSubmitted ? "" : props.stateTasks }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.workedfrom }>Date From: </label>
+                    <label htmlFor={ props.workedfrom }>Date From: </label>
                     <input 
-                        name={ this.props.workedfrom } 
-                        type={ this.props.date }
-                        value={ this.props.isSubmitted ? "" : this.props.stateWorkedFrom }
-                        onChange={ this.props.onChange }
+                        name={ props.workedfrom } 
+                        type={ props.date }
+                        value={ props.isSubmitted ? "" : props.stateWorkedFrom }
+                        onChange={ props.onChange }
                     />
                     
                     <br />
-                    <label htmlFor={ this.props.workeduntil }>Date Until: </label>
+                    <label htmlFor={ props.workeduntil }>Date Until: </label>
                     <input 
-                        name={ this.props.workeduntil } 
-                        type={ this.props.date }
-                        value={ this.props.isSubmitted ? "" : this.props.stateWorkedUntil }
-                        onChange={ this.props.onChange }
+                        name={ props.workeduntil } 
+                        type={ props.date }
+                        value={ props.isSubmitted ? "" : props.stateWorkedUntil }
+                        onChange={ props.onChange }
                     />
                     
             </div>
         )
-    }
 }
 
 export default Work;
