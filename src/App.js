@@ -43,27 +43,28 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   
   function handleChange (event) {
-    const {name, value} = event.target
-    this.setState({
-      [name]: value
-    })
+    setName(event.target.value)
   }
 
-  function handleSubmit (event) {
-    event.preventDefault()
-    this.setState(prevState => {
-      return {
-        isSubmitted: !prevState.isSubmitted
-      }
-    })
-  }
+  // function handleSubmit (event) {
+  //   event.preventDefault()
+  //   this.setState(prevState => {
+  //     return {
+  //       isSubmitted: !prevState.isSubmitted
+  //     }
+  //   })
+  // }
 
   return (
       <div className="App">
         <Heading />
         <div className="content">
           <div className="forms">
-            <form onSubmit={ handleSubmit }>
+            <form 
+            // onSubmit={ 
+              // handleSubmit 
+              // }
+              >
               <General 
                 fullname="fullName"
                 email="email"
@@ -89,7 +90,9 @@ function App() {
                 stateSubject={ subject }
                 stateStudiedFrom={ studiedFrom }
                 stateStudiedUntil={ studiedUntil }
-                onChange={ handleChange }
+                // onChange={ 
+                //   // handleChange 
+                // }
               />
               <Work 
                 company="company"
@@ -106,7 +109,9 @@ function App() {
                 stateTasks={ tasks }
                 stateWorkedFrom={ workedFrom }
                 stateWorkedUntil={ workedUntil }
-                onChange={ handleChange }
+                // onChange={ 
+                //   // handleChange 
+                // }
               />
               <button type="submit" className={ isSubmitted ? "red" : "green" }>
                 { isSubmitted ? "EDIT" : "SUBMIT" }

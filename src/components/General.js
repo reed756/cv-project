@@ -8,7 +8,7 @@ function General(props) {
                         name={ props.fullname }
                         type={ props.text }
                         placeholder={ props.placeholder }
-                        value={ props.isSubmitted ? "" : props.stateName }
+                        // value={ props.isSubmitted ? "" : props.stateName }
                         onChange={ props.onChange }
                         className="input"
                     />
@@ -19,7 +19,7 @@ function General(props) {
                         name={ props.email } 
                         type={ props.email }
                         placeholder={ props.placeholder }
-                        value={ props.isSubmitted ? "" : props.stateEmail }
+                        // value={ props.isSubmitted ? "" : props.stateEmail }
                         onChange={ props.onChange }
                     />
                     
@@ -29,7 +29,7 @@ function General(props) {
                         name={ props.phone } 
                         type={ props.phone }
                         placeholder={ props.placeholder }
-                        value={ props.isSubmitted ? "" : props.statePhone }
+                        // value={ props.isSubmitted ? "" : props.statePhone }
                         onChange={ props.onChange }
                     />
                     
