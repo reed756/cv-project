@@ -42,18 +42,14 @@ function App() {
   const [workedUntil, setWorkedUntil] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   
-  function handleChange (event) {
-    setName(event.target.value)
-  }
-
-  // function handleSubmit (event) {
-  //   event.preventDefault()
-  //   this.setState(prevState => {
-  //     return {
-  //       isSubmitted: !prevState.isSubmitted
-  //     }
-  //   })
+  // function handleChange (event) {
+  //   setName(event.target.value)
   // }
+
+  function handleSubmit (event) {
+    event.preventDefault()
+    setIsSubmitted(!isSubmitted)
+  }
 
   return (
       <div className="App">
@@ -61,9 +57,9 @@ function App() {
         <div className="content">
           <div className="forms">
             <form 
-            // onSubmit={ 
-              // handleSubmit 
-              // }
+            onSubmit={ 
+              handleSubmit 
+              }
               >
               <General 
                 fullname="fullName"
@@ -75,7 +71,9 @@ function App() {
                 stateName={ name }
                 stateEmail={ email }
                 statePhone={ phone }
-                onChange={ handleChange }
+                changeName={ setName }
+                changeEmail={ setEmail }
+                changePhone={ setPhone }
               />
               <Education 
                 school="school"
@@ -90,9 +88,10 @@ function App() {
                 stateSubject={ subject }
                 stateStudiedFrom={ studiedFrom }
                 stateStudiedUntil={ studiedUntil }
-                // onChange={ 
-                //   // handleChange 
-                // }
+                changeSchool={ setSchool }
+                changeSubject={ setSubject }
+                changeStudiedFrom={ setStudiedFrom }
+                changeStudiedUntil={ setStudiedUntil }
               />
               <Work 
                 company="company"
@@ -109,9 +108,11 @@ function App() {
                 stateTasks={ tasks }
                 stateWorkedFrom={ workedFrom }
                 stateWorkedUntil={ workedUntil }
-                // onChange={ 
-                //   // handleChange 
-                // }
+                changeCompany={ setCompany }
+                changePosition={ setPosition }
+                changeTasks={ setTasks }
+                changeWorkedFrom={ setWorkedFrom }
+                changeWorkedUntil={ setWorkedUntil }
               />
               <button type="submit" className={ isSubmitted ? "red" : "green" }>
                 { isSubmitted ? "EDIT" : "SUBMIT" }

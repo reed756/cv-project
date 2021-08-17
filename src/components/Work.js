@@ -9,7 +9,9 @@ function Work(props) {
                         type={ props.text }
                         placeholder={ props.placeholder }
                         value={ props.isSubmitted ? "" : props.stateCompany }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeCompany(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -19,7 +21,9 @@ function Work(props) {
                         type={ props.text }
                         placeholder={ props.placeholder }
                         value={ props.isSubmitted ? "" : props.statePosition }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changePosition(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -29,7 +33,9 @@ function Work(props) {
                         type={ props.text }
                         placeholder={ props.placeholder }
                         value={ props.isSubmitted ? "" : props.stateTasks }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeTasks(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -38,7 +44,9 @@ function Work(props) {
                         name={ props.workedfrom } 
                         type={ props.date }
                         value={ props.isSubmitted ? "" : props.stateWorkedFrom }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeWorkedFrom(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -47,7 +55,9 @@ function Work(props) {
                         name={ props.workeduntil } 
                         type={ props.date }
                         value={ props.isSubmitted ? "" : props.stateWorkedUntil }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeWorkedUntil(event.target.value)
+                        } }
                     />
                     
             </div>

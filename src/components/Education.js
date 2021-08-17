@@ -9,7 +9,9 @@ function Education(props) {
                         type={ props.text }
                         placeholder={ props.placeholder }
                         value={ props.isSubmitted ? "" : props.stateSchool }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeSchool(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -19,7 +21,9 @@ function Education(props) {
                         type={ props.text }
                         placeholder={ props.placeholder }
                         value={ props.isSubmitted ? "" : props.stateSubject }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeSubject(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -28,7 +32,9 @@ function Education(props) {
                         name={ props.studiedfrom } 
                         type={ props.date }
                         value={ props.isSubmitted ? "" : props.stateStudiedFrom }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeStudiedFrom(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -37,7 +43,9 @@ function Education(props) {
                         name={ props.studieduntil } 
                         type={ props.date }
                         value={ props.isSubmitted ? "" : props.stateStudiedUntil }
-                        onChange={ props.onChange }
+                        onChange={ (event) => {
+                            props.changeStudiedUntil(event.target.value)
+                        } }
                     />
                     
             </div>

@@ -8,8 +8,10 @@ function General(props) {
                         name={ props.fullname }
                         type={ props.text }
                         placeholder={ props.placeholder }
-                        // value={ props.isSubmitted ? "" : props.stateName }
-                        onChange={ props.onChange }
+                        value={ props.isSubmitted ? "" : props.stateName }
+                        onChange={ (event) => {
+                            props.changeName(event.target.value)
+                        } }
                         className="input"
                     />
                     
@@ -19,8 +21,10 @@ function General(props) {
                         name={ props.email } 
                         type={ props.email }
                         placeholder={ props.placeholder }
-                        // value={ props.isSubmitted ? "" : props.stateEmail }
-                        onChange={ props.onChange }
+                        value={ props.isSubmitted ? "" : props.stateEmail }
+                        onChange={ (event) => {
+                            props.changeEmail(event.target.value)
+                        } }
                     />
                     
                     <br />
@@ -29,8 +33,10 @@ function General(props) {
                         name={ props.phone } 
                         type={ props.phone }
                         placeholder={ props.placeholder }
-                        // value={ props.isSubmitted ? "" : props.statePhone }
-                        onChange={ props.onChange }
+                        value={ props.isSubmitted ? "" : props.statePhone }
+                        onChange={ (event) => {
+                            props.changePhone(event.target.value)
+                        } }
                     />
                     
             </div>
