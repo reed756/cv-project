@@ -8,25 +8,6 @@ import Template from './components/Template';
 import Footer from './components/Footer'
 
 function App() {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     fullName: '',
-  //     email: '',
-  //     phone: '',
-  //     school: "",
-  //     subject: "",
-  //     studiedFrom: "",
-  //     studiedUntil: "",
-  //     company: "",
-  //     position: "",
-  //     tasks: "",
-  //     workedFrom: "",
-  //     workedUntil: "",
-  //     isSubmitted: false,
-  //   }
-  //   this.handleChange = this.handleChange.bind(this)
-  // }
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -41,10 +22,6 @@ function App() {
   const [workedFrom, setWorkedFrom] = useState('');
   const [workedUntil, setWorkedUntil] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
-  // function handleChange (event) {
-  //   setName(event.target.value)
-  // }
 
   function handleSubmit (event) {
     event.preventDefault()

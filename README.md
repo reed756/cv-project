@@ -1,20 +1,56 @@
-Introduction
-Congratulations, you made it to the first project. In this project, you will be creating a small CV application. It’s a great project to get you started, because it includes many of the basic concepts you’ve learned so far.
+# React 
 
-Just a quick reminder
-Learning a new technology is never easy. Along the way you might think: “Well, I could easily implement this in plain Javascript”. BUT don’t let that demotivate you. If you keep pushing, you will end up far more productive than you were before with the ability to add a new skill to your skillset.
+A web application which shows a preview of a what a CV would look like based on what the user puts in. Features create-react-app as well as Hooks to achieve this. 
 
-So let’s get started.
+## Lessons Learned
 
-Assignment
-Create a new project using npx create-react-app cv-project. If you need a reminder on how it works, check out the previous lessons. Don’t forget to setup a GitHub repository for you project, to push your progress.
-Remove the boilerplate code created by create-react-app.
-Think about how to structure your application into components. Your application should include:
-A section to add general information like name, email, phone number.
-A section to add your educational experience (school name, title of study, date of study)
-A section to add practical experience (company name, position title, main tasks of your jobs, date from and until when you worked for that company)
-Be sure to include an edit and submit button for each section or for the whole CV, your preference. The submit button should submit your form and display the value of your input fields in HTML elements. The edit button should add back (display) the input fields, with the previously displayed information as values. In those input fields, you should be able to edit and resubmit the content. You’re going to make heavy use of state and props, so make sure you understood those concepts.
-Create a components folder in your src directory and add your components.
-Include a styles folder in your src directory for your CSS files. You’ll need to import these in the component files to use them.
-Don’t forget to push your solution to GitHub. You should be proud of your work and show it off to the world!
-Tip: If you’re confused on how to deploy using GitHub Pages, take a look at this article
+My first real React project after following a tutuorial on creating a todo list as well as a meme generator app. Iinitially used class based components in the first version of this, then decided to go away and learn Hooks for the later versions.
+
+First experience of using Hooks, can definitely see why people are doing away with class based components - removes the hassle of binding to this and being able to pass the setState method as props makes updating global state a lot easier.
+
+## Potential Future Features
+
+- Editing components to allow the user to put in more than one Education or Work section.
+
+- Adding features that allow the user to actually print off or download the CV as a PDF. 
+
+## Deployment
+
+Deployed with [github pages](https://pages.github.com/).
+
+## Get started
+
+From your command line, first clone this repo:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/reed756/cv-project
+
+# Go into the repository
+$ cd cv-project
+
+# Remove current origin repository
+$ git remote remove origin
+```
+Then you can install the dependencies using NPM:
+
+Using NPM:
+
+```bash
+# Install dependencies
+$ npm install
+
+# Start development server
+$ npm start
+```
+You should now have a development server running in your default browser.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
