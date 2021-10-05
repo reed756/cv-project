@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 import '../styles/Education.css'
 
 function Education(props) {
@@ -50,6 +53,18 @@ function Education(props) {
                     
             </div>
         )
+}
+
+Education.propTypes = {
+    school: PropTypes.string,
+    subject: PropTypes.string,
+    stateStudiedFrom: PropTypes.string,
+    stateStudiedUntil:  PropTypes.string,
+    studiedfrom: PropTypes.string,
+    studieduntil: PropTypes.string,
+    stateSchool: PropTypes.string,
+    stateSubject: PropTypes.string,
+    isSubmitted: PropTypes.bool
 }
 
 export default Education;

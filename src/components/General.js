@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 import '../styles/General.css'
 
 function General(props) {
@@ -42,5 +45,15 @@ function General(props) {
             </div>
         )
 }
+
+General.propTypes = {
+    stateName: PropTypes.string,
+    fullname: PropTypes.string,
+    stateEmail: PropTypes.string,
+    email: PropTypes.string,
+    statePhone: PropTypes.string,
+    phone: PropTypes.string,
+    isSubmitted: PropTypes.bool
+};
 
 export default General;

@@ -113,7 +113,7 @@ function App() {
             />
           </div>
         </div>
-        <Footer footer="© 2021 - James Reed"/>
+        <Footer/>
       </div>
     );
 }

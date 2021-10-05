@@ -1,9 +1,10 @@
+import React from 'react'
 import '../styles/Footer.css'
 
-function Footer(props) {
+function Footer() {
         return (
             <footer>
-                <h3>{ props.footer }</h3>
+                <h3>© 2021 - James Reed</h3>
             </footer>
         )
 }

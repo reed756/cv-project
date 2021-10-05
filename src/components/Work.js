@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 import '../styles/Work.css'
 
 function Work(props) {
@@ -62,6 +65,20 @@ function Work(props) {
                     
             </div>
         )
+}
+
+Work.propTypes = {
+    company: PropTypes.string,
+    position: PropTypes.string,
+    tasks: PropTypes.string,
+    workedfrom: PropTypes.string,
+    workeduntil: PropTypes.string,
+    stateCompany: PropTypes.string,
+    statePosition: PropTypes.string,
+    stateWorkedFrom: PropTypes.string,
+    stateWorkedUntil: PropTypes.string,
+    stateTasks: PropTypes.string,
+    isSubmitted: PropTypes.bool
 }
 
 export default Work;
