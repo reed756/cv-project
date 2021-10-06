@@ -1,13 +1,56 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import '../styles/Work.css'
+import styled from 'styled-components'
 
 function Work(props) {
+        const WorkDiv = styled.div`
+            margin-bottom: 10px;
+        `
+        const WorkLabel = styled.label`
+            display: inline-block;
+            width: 200px;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        `
+        const WorkInput = styled.input`
+            width: 400px;
+            padding: 0 10px;
+            border: none;
+            margin-bottom: 5px;
+            font-size: 20px;
+            border-radius: 2em;
+            @media only screen and (max-width: 1200px) {
+                    display: block;
+            }
+            @media only screen and (max-width: 410px) {
+                    width: 300px;
+            }
+            @media only screen and (max-width: 320px) {
+                    width: 275px;
+            }
+        `
+        const WorkTextArea = styled.textarea`
+            width: 400px;
+            padding: 0 10px;
+            border: none;
+            margin-bottom: 5px;
+            font-size: 20px;
+            border-radius: 2em;
+            @media only screen and (max-width: 1200px) {
+                    display: block;
+            }
+            @media only screen and (max-width: 410px) {
+                    width: 300px;
+            }
+            @media only screen and (max-width: 320px) {
+                    width: 275px;
+            }
+        `
         return (
-            <div className="work-box">
-                    <label htmlFor={ props.company }>Company Name: </label>
-                    <input 
+            <WorkDiv className="work-box">
+                    <WorkLabel htmlFor={ props.company }>Company Name: </WorkLabel>
+                    <WorkInput 
                         name={ props.company } 
                         type={ props.text }
                         placeholder={ props.placeholder }
@@ -18,8 +61,8 @@ function Work(props) {
                     />
                     
                     <br />
-                    <label htmlFor={ props.position }>Position: </label>
-                    <input 
+                    <WorkLabel htmlFor={ props.position }>Position: </WorkLabel>
+                    <WorkInput 
                         name={ props.position } 
                         type={ props.text }
                         placeholder={ props.placeholder }
@@ -30,8 +73,8 @@ function Work(props) {
                     />
                     
                     <br />
-                    <label htmlFor={ props.tasks }>Main Tasks: </label>
-                    <textarea 
+                    <WorkLabel htmlFor={ props.tasks }>Main Tasks: </WorkLabel>
+                    <WorkTextArea 
                         name={ props.tasks }
                         type={ props.text }
                         placeholder={ props.placeholder }
@@ -42,8 +85,8 @@ function Work(props) {
                     />
                     
                     <br />
-                    <label htmlFor={ props.workedfrom }>Date From: </label>
-                    <input 
+                    <WorkLabel htmlFor={ props.workedfrom }>Date From: </WorkLabel>
+                    <WorkInput 
                         name={ props.workedfrom } 
                         type={ props.date }
                         value={ props.isSubmitted ? "" : props.stateWorkedFrom }
@@ -53,8 +96,8 @@ function Work(props) {
                     />
                     
                     <br />
-                    <label htmlFor={ props.workeduntil }>Date Until: </label>
-                    <input 
+                    <WorkLabel htmlFor={ props.workeduntil }>Date Until: </WorkLabel>
+                    <WorkInput 
                         name={ props.workeduntil } 
                         type={ props.date }
                         value={ props.isSubmitted ? "" : props.stateWorkedUntil }
@@ -62,8 +105,7 @@ function Work(props) {
                             props.changeWorkedUntil(event.target.value)
                         } }
                     />
-                    
-            </div>
+            </WorkDiv>
         )
 }
 

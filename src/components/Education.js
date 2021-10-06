@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import '../styles/Education.css'
-
 function Education(props) {
 
         const EducationDiv = styled.div`
@@ -23,6 +21,9 @@ function Education(props) {
             margin-bottom: 5px;
             font-size: 20px;
             border-radius: 2em;
+            @media only screen and (max-width: 1200px) {
+                    display: block;
+            }
             @media only screen and (max-width: 410px) {
                     width: 300px;
             }
